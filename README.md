@@ -1,8 +1,4 @@
-# Demo: Zava Media AI Assistant <br/> Multi-Agent Architecture <br/> for Image & Video Processing - Overview 
-
-Costa Rica
-
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
+# Demo: Zava Media AI Assistant <br/> Multi-Agent Architecture <br/> for Image & Video Processing - Overview
 
 Last updated: 2026-01-23
 
@@ -26,26 +22,25 @@ Last updated: 2026-01-23
 
 </details>
 
-> [!IMPORTANT]
-> Disclaimer: This repository contains a demo of `Zava Media AI Assistant`, a hybrid system using **2 Azure AI Agents** (via Azure AI Agents Service) for conversational orchestration and cropping, with **code-based orchestration** for other media tasks (video, image generation, document processing). It features a fully automated `"Zero-Touch" deployment` pipeline orchestrated by Terraform, which `provisions infrastructure, creates specialized AI agents in MSFT Foundry, and deploys the complete application stack.` Feel free to modify this as needed, it's just a reference. Please refer [TechWorkshop L300: AI Apps and Agents](https://microsoft.github.io/TechWorkshop-L300-AI-Apps-and-agents/), and if needed contact Microsoft directly: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME) for more guidance.
+!!! info "Demo scope"
+  This repository contains a demo of `Zava Media AI Assistant`, a hybrid system using **2 Azure AI Agents** (via Azure AI Agents Service) for conversational orchestration and cropping, with **code-based orchestration** for other media tasks (video, image generation, document processing). It features a fully automated `"Zero-Touch" deployment` pipeline orchestrated by Terraform, which `provisions infrastructure, creates specialized AI agents in MSFT Foundry, and deploys the complete application stack.` Feel free to modify this as needed; it is a reference. Please refer to [TechWorkshop L300: AI Apps and Agents](https://microsoft.github.io/TechWorkshop-L300-AI-Apps-and-agents/), and contact [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME) for additional guidance.
 
 > E.g 
 
 <img width="1911" height="1080" alt="image" src="https://github.com/user-attachments/assets/b53017b9-4229-46b2-9759-b8aab8316b89" />
 
-> [!IMPORTANT]
-> The deployment process `typically takes 15-20 minutes`
->
-> 1. Adjust [terraform.tfvars](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/terraform.tfvars) values
-> 2. Initialize terraform with `terraform init`. Click here to [understand more about the deployment process](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/README.md)
-> 3. Run `terraform apply` - this automatically handles **all** deployment including agent creation and configuration
+!!! info "Deployment duration"
+  The deployment process `typically takes 15-20 minutes`.
+
+  1. Adjust [terraform.tfvars](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/terraform.tfvars) values.
+  2. Initialize Terraform with `terraform init`. [Learn more about the deployment process](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/README.md).
+  3. Run `terraform apply`. This automatically handles **all** deployment, including agent creation and configuration.
 
 ## Key Features
 
-> [!WARNING]
->
-> - **Multi-Region Deployment**: Sweden Central hosts 4 models + 2 agents, East US hosts 1 model.
-> - All models use **GlobalStandard** SKU for optimal performance and availability.
+!!! warning "Regional deployment"
+  - **Multi-Region Deployment**: Sweden Central hosts 4 models + 2 agents, and East US hosts 1 model.
+  - All models use the **GlobalStandard** SKU for optimal performance and availability.
 
 > For example East US \& Sweden Central:
 
@@ -75,24 +70,23 @@ Last updated: 2026-01-23
 
 ## Architecture Overview
 
-> [!IMPORTANT]
-> Agents use CHAT models only (not image generation models). GPT-4o is a **chat model with vision**, `it can see/analyze images in conversation but doesn't generate images.`
+!!! info "Agent model boundary"
+  Agents use chat models only, not image-generation models. GPT-4o is a **chat model with vision**: it can analyze images in a conversation but does not generate images.
 
-> **How It Works:**
->
-> 1. **Orchestrator Agent** (model-router - chat model) receives user requests and routes appropriately
-> 2. **Vision Analyst Agent** (GPT-4o - chat model with vision) can SEE images in chat and provide object detection coordinates via JSON
-> 3. **Code Orchestration** calls generation models directly:
->    - Video generation (Sora - not an agent, direct API call)
->    - Image generation (FLUX.1-Kontext-pro - not an agent, direct API call)
-> 4. **Key Distinction**: 
->    - **Agents = Chat Models** (model-router, GPT-4o) for conversation and analysis
->    - **Code = Generation Models** (Sora, FLUX) for creating videos/images
->    - GPT-4o is a CHAT model that can see images, NOT an image generation model
+### How it works
 
-> [!WARNING]
-> **Azure Quota and Model Availability**
-> The models deployed (`model-router`, `GPT-4o`, `FLUX.2-pro`, `FLUX.1-Kontext-pro`, `Sora`) require GPU capacity and are subject to Azure quotas. **If you encounter deployment errors related to "Insufficient Quota"**, request a quota increase: [Azure Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest)
+1. **Orchestrator Agent** (model-router - chat model) receives user requests and routes appropriately.
+2. **Vision Analyst Agent** (GPT-4o - chat model with vision) can analyze images in chat and provide object-detection coordinates as JSON.
+3. **Code orchestration** calls generation models directly:
+   - Video generation (Sora - not an agent, direct API call).
+   - Image generation (FLUX.1-Kontext-pro - not an agent, direct API call).
+4. **Key distinction**:
+   - **Agents = chat models** (model-router, GPT-4o) for conversation and analysis.
+   - **Code = generation models** (Sora, FLUX) for creating videos and images.
+   - GPT-4o is a chat model that can analyze images, not an image-generation model.
+
+!!! warning "Azure quota and model availability"
+  The deployed models (`model-router`, `GPT-4o`, `FLUX.2-pro`, `FLUX.1-Kontext-pro`, and `Sora`) require GPU capacity and are subject to Azure quotas. If you encounter an **Insufficient Quota** error, request a quota increase through [Azure Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest).
 
 ## Architecture
 
@@ -208,9 +202,3 @@ graph TD
          
      - **Document**: "Extract all text from this PDF" or "Summarize this document" (Sweden Central - FLUX.1-Kontext-pro)
 
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1473-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-23</p>
-</div>
-<!-- END BADGE -->
