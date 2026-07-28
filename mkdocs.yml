@@ -32,7 +32,11 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path:
         - .
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.tasklist:
       custom_checkbox: true
   - toc:
@@ -43,6 +47,8 @@ extra_css:
 extra_javascript:
   - assets/js/logo-link.js
   - assets/js/external-links.js
+  - path: assets/js/mermaid.js
+    type: module
 extra:
   generator: false
   social:

@@ -25,5 +25,16 @@ create the configured Foundry resources and agents, and deploy the application.
 3. Run `terraform init`, then review `terraform plan -var-file terraform.tfvars`.
 4. Apply the approved plan with `terraform apply -var-file terraform.tfvars`.
 
+## Deployment flow
+
+```mermaid
+graph TD
+    A[az login] --> B[terraform init]
+    B --> C{Terraform provisioning stage}
+    C -->|Review| D[terraform plan]
+    C -->|Apply| E[terraform apply]
+    C -->|Remove resources| F[terraform destroy]
+```
+
 For prerequisites, screenshots, and the full provisioning procedure, open the
 [Terraform deployment guide](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/README.md).
