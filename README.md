@@ -200,5 +200,5 @@ graph TD
 
          <https://github.com/user-attachments/assets/d882e712-e9c2-4674-ac3d-371b3cab5f8a>
          
-     - **Document**: "Extract all text from this PDF" or "Summarize this document" (Sweden Central - FLUX.1-Kontext-pro)
+    - **Document**: "Extract all text from this PDF" or "Summarize this document" (Sweden Central - FLUX.1-Kontext-pro)
 
