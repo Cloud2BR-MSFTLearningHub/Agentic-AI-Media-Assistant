@@ -1,12 +1,10 @@
 # Demo: Zava Media AI Assistant <br/> Multi-Agent Architecture <br/> for Image & Video Processing - Overview 
 
-Costa Rica 
+Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 
 Last updated: 2026-01-23
-
-----------
 
 <details>
 <summary><b>List of References</b> (Click to expand)</summary>
