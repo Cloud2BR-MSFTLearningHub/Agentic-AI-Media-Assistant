@@ -13,6 +13,7 @@ __pycache__
 .env_automation
 *.zip
 *logs
+site/
 
 # .tfstate files
 *.tfstate
