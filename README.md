@@ -36,8 +36,8 @@ Last updated: 2026-01-23
 > [!IMPORTANT]
 > The deployment process `typically takes 15-20 minutes`
 >
-> 1. Adjust [terraform.tfvars](./terraform-infrastructure/terraform.tfvars) values 
-> 2. Initialize terraform with `terraform init`. Click here to [understand more about the deployment process](./terraform-infrastructure/README.md)
+> 1. Adjust [terraform.tfvars](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/terraform.tfvars) values
+> 2. Initialize terraform with `terraform init`. Click here to [understand more about the deployment process](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/README.md)
 > 3. Run `terraform apply` - this automatically handles **all** deployment including agent creation and configuration
 
 ## Key Features
@@ -69,9 +69,9 @@ Last updated: 2026-01-23
 - **OSS Baseline (Open-Source)**: Includes an in-app OSS baseline with optional Diffusers worker on Azure (AKS or `oss_azure_worker_url_override`) for more realistic output with open source libraries.
 - **Real-Time Image Processing**: Upload or paste images directly into the chat for immediate agent action
 - **Real MSFT Foundry Agents**: Integrates with **MSFT Foundry** to create and host persistent agents across multiple projects
-- **Zero-Touch Deployment**: A single [terraform apply](./terraform-infrastructure/README.md) command handles the entire lifecycle
+- **Zero-Touch Deployment**: A single [terraform apply](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/README.md) command handles the entire lifecycle
 - **Advanced Task Coordination**: Inter-agent task delegation (e.g., "Crop this, then change background, then add text")
-- **Dynamic Configuration**: All settings managed via [terraform.tfvars](./terraform-infrastructure/terraform.tfvars) - `no code changes needed, just add your values here`
+- **Dynamic Configuration**: All settings managed via [terraform.tfvars](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/terraform.tfvars) - `no code changes needed, just add your values here`
 
 ## Architecture Overview
 
