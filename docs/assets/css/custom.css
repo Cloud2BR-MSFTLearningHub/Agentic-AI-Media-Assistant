@@ -38,6 +38,26 @@
   max-width: 100%;
 }
 
+.media-video {
+  margin: 1rem 0;
+}
+
+.media-video video {
+  background: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: min(100%, 960px);
+}
+
+.media-video p {
+  color: #64748b;
+  font-size: 0.78rem;
+  margin: 0.35rem 0 0;
+}
+
 .md-typeset table:not([class]) {
   border: 1px solid #9fb9d2;
   border-collapse: separate;

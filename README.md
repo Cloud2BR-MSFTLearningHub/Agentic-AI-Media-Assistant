@@ -181,7 +181,13 @@ graph TD
    - Visit `https://<your-app-name>.azurewebsites.net`
    - You should see the Zava Media AI interface
     
-      [Open the deployed assistant walkthrough](https://github.com/user-attachments/assets/9422d50b-a2ca-4ae4-bf01-ab3090d60313)
+       <div class="media-video">
+         <video controls preload="metadata">
+           <source src="https://github.com/user-attachments/assets/9422d50b-a2ca-4ae4-bf01-ab3090d60313" type="video/mp4">
+           Your browser does not support embedded video. <a href="https://github.com/user-attachments/assets/9422d50b-a2ca-4ae4-bf01-ab3090d60313">Open the deployed assistant walkthrough</a>.
+         </video>
+         <p>Deployed assistant walkthrough.</p>
+       </div>
 
 2. **Verify Agent Architecture**:
    - Go to the [MSFT Foundry Portal](https://ai.azure.com)
@@ -207,13 +213,25 @@ graph TD
      
          > Video of a bottle in different environments:
          
-         [Watch the bottle-environments video](https://github.com/user-attachments/assets/9f76cc5b-17de-40af-b6c7-b00ed07f5871)
+         <div class="media-video">
+           <video controls preload="metadata">
+             <source src="https://github.com/user-attachments/assets/9f76cc5b-17de-40af-b6c7-b00ed07f5871" type="video/mp4">
+             Your browser does not support embedded video. <a href="https://github.com/user-attachments/assets/9f76cc5b-17de-40af-b6c7-b00ed07f5871">Watch the bottle-environments video</a>.
+           </video>
+           <p>Bottle-environments video.</p>
+         </div>
 
          > "Generate a video of a Scottish terrier" (Sweden Central - Sora)
 
           <img width="1910" height="1081" alt="Sora video-generation result" src="https://github.com/user-attachments/assets/6d91b79f-2fbc-44be-a0cb-0b07337c79ee" />
 
-         [Watch the Sora generation video](https://github.com/user-attachments/assets/d882e712-e9c2-4674-ac3d-371b3cab5f8a)
+         <div class="media-video">
+           <video controls preload="metadata">
+             <source src="https://github.com/user-attachments/assets/d882e712-e9c2-4674-ac3d-371b3cab5f8a" type="video/mp4">
+             Your browser does not support embedded video. <a href="https://github.com/user-attachments/assets/d882e712-e9c2-4674-ac3d-371b3cab5f8a">Watch the Sora generation video</a>.
+           </video>
+           <p>Sora video-generation result.</p>
+         </div>
          
     - **Document**: "Extract all text from this PDF" or "Summarize this document" (Sweden Central - FLUX.1-Kontext-pro)
 
