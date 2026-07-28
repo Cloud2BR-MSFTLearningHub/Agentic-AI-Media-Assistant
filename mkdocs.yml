@@ -52,3 +52,7 @@ extra:
 
 nav:
   - Home: index.md
+  - Deployment:
+      - Terraform template: deployment/terraform.md
+  - Operations:
+      - Troubleshooting: operations/troubleshooting.md

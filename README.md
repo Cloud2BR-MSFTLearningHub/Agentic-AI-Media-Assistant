@@ -27,7 +27,7 @@ Last updated: 2026-01-23
 
 > E.g 
 
-<img width="1911" height="1080" alt="image" src="https://github.com/user-attachments/assets/b53017b9-4229-46b2-9759-b8aab8316b89" />
+<img width="1911" height="1080" alt="Zava Media AI Assistant interface" src="https://github.com/user-attachments/assets/b53017b9-4229-46b2-9759-b8aab8316b89" />
 
 !!! info "Deployment duration"
   The deployment process `typically takes 15-20 minutes`.
@@ -35,6 +35,21 @@ Last updated: 2026-01-23
   1. Adjust [terraform.tfvars](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/terraform.tfvars) values.
   2. Initialize Terraform with `terraform init`. [Learn more about the deployment process](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/README.md).
   3. Run `terraform apply`. This automatically handles **all** deployment, including agent creation and configuration.
+
+## Deployment and reference guides
+
+<div class="guide-grid">
+  <a class="guide-card" href="deployment/terraform/">
+    <span class="guide-card__label">Infrastructure</span>
+    <h2>Terraform deployment template</h2>
+    <p>Review the template files, required values, and deployment commands.</p>
+  </a>
+  <a class="guide-card" href="operations/troubleshooting/">
+    <span class="guide-card__label">Operations</span>
+    <h2>Troubleshooting guide</h2>
+    <p>Resolve setup, authentication, permissions, provider, and state issues.</p>
+  </a>
+</div>
 
 ## Key Features
 
@@ -46,7 +61,7 @@ Last updated: 2026-01-23
 
 | East US | Sweden Central | 
 | --- | ---- | 
-| <img width="1891" height="417" alt="image" src="https://github.com/user-attachments/assets/edee7ca9-5148-4ee0-b461-1b8960550226" /> | <img width="1892" height="478" alt="image" src="https://github.com/user-attachments/assets/92d00545-757a-462a-8bba-a42a1cbc5eff" /> | 
+| <img width="1891" height="417" alt="East US model deployment configuration" src="https://github.com/user-attachments/assets/edee7ca9-5148-4ee0-b461-1b8960550226" /> | <img width="1892" height="478" alt="Sweden Central model deployment configuration" src="https://github.com/user-attachments/assets/92d00545-757a-462a-8bba-a42a1cbc5eff" /> |
 
 - **Hybrid Agent Architecture**: 2 Azure AI Agents for chat-based orchestration + code-based orchestration for media processing
 - **Multi-Region Deployment**: 
@@ -166,7 +181,7 @@ graph TD
    - Visit `https://<your-app-name>.azurewebsites.net`
    - You should see the Zava Media AI interface
     
-       <https://github.com/user-attachments/assets/9422d50b-a2ca-4ae4-bf01-ab3090d60313>
+      [Open the deployed assistant walkthrough](https://github.com/user-attachments/assets/9422d50b-a2ca-4ae4-bf01-ab3090d60313)
 
 2. **Verify Agent Architecture**:
    - Go to the [MSFT Foundry Portal](https://ai.azure.com)
@@ -182,7 +197,7 @@ graph TD
 
         | | | 
         | --- | --- |
-        | <img width="1917" height="1087" alt="image" src="https://github.com/user-attachments/assets/f314af50-8dcb-4a0a-81e7-549bb606f9e9" /> |  <img width="1909" height="1088" alt="image" src="https://github.com/user-attachments/assets/0b227a3f-3645-4070-80a8-9d204169ce09" /> |
+        | <img width="1917" height="1087" alt="Chat response example in the assistant" src="https://github.com/user-attachments/assets/f314af50-8dcb-4a0a-81e7-549bb606f9e9" /> | <img width="1909" height="1088" alt="Assistant capability example" src="https://github.com/user-attachments/assets/0b227a3f-3645-4070-80a8-9d204169ce09" /> |
   
      - **Image Upload**: Upload an image and ask "Crop the main subject"
      - **Background**: "Change the background to a beach scene" (routed to East US for fast generation)
@@ -192,13 +207,13 @@ graph TD
      
          > Video of a bottle in different environments:
          
-         <https://github.com/user-attachments/assets/9f76cc5b-17de-40af-b6c7-b00ed07f5871>
+         [Watch the bottle-environments video](https://github.com/user-attachments/assets/9f76cc5b-17de-40af-b6c7-b00ed07f5871)
 
          > "Generate a video of a Scottish terrier" (Sweden Central - Sora)
 
-          <img width="1910" height="1081" alt="image" src="https://github.com/user-attachments/assets/6d91b79f-2fbc-44be-a0cb-0b07337c79ee" />
+          <img width="1910" height="1081" alt="Sora video-generation result" src="https://github.com/user-attachments/assets/6d91b79f-2fbc-44be-a0cb-0b07337c79ee" />
 
-         <https://github.com/user-attachments/assets/d882e712-e9c2-4674-ac3d-371b3cab5f8a>
+         [Watch the Sora generation video](https://github.com/user-attachments/assets/d882e712-e9c2-4674-ac3d-371b3cab5f8a)
          
     - **Document**: "Extract all text from this PDF" or "Summarize this document" (Sweden Central - FLUX.1-Kontext-pro)
 
