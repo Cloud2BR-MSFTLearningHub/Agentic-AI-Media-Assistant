@@ -22,29 +22,29 @@ Last updated: 2026-01-23
 
 </details>
 
-!!! info "Demo scope"
-  This repository contains a demo of `Zava Media AI Assistant`, a hybrid system using **2 Azure AI Agents** (via Azure AI Agents Service) for conversational orchestration and cropping, with **code-based orchestration** for other media tasks (video, image generation, document processing). It features a fully automated `"Zero-Touch" deployment` pipeline orchestrated by Terraform, which `provisions infrastructure, creates specialized AI agents in MSFT Foundry, and deploys the complete application stack.` Feel free to modify this as needed; it is a reference. Please refer to [TechWorkshop L300: AI Apps and Agents](https://microsoft.github.io/TechWorkshop-L300-AI-Apps-and-agents/), and contact [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME) for additional guidance.
+> **Info: Demo scope**
+> This repository contains a demo of `Zava Media AI Assistant`, a hybrid system using **2 Azure AI Agents** (via Azure AI Agents Service) for conversational orchestration and cropping, with **code-based orchestration** for other media tasks (video, image generation, document processing). It features a fully automated `"Zero-Touch" deployment` pipeline orchestrated by Terraform, which `provisions infrastructure, creates specialized AI agents in MSFT Foundry, and deploys the complete application stack.` Feel free to modify this as needed; it is a reference. Please refer to [TechWorkshop L300: AI Apps and Agents](https://microsoft.github.io/TechWorkshop-L300-AI-Apps-and-agents/), and contact [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME) for additional guidance.
 
 > E.g 
 
 <img width="1911" height="1080" alt="Zava Media AI Assistant interface" src="https://github.com/user-attachments/assets/b53017b9-4229-46b2-9759-b8aab8316b89" />
 
-!!! info "Deployment duration"
-  The deployment process `typically takes 15-20 minutes`.
-
-  1. Adjust [terraform.tfvars](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/terraform.tfvars) values.
-  2. Initialize Terraform with `terraform init`. [Learn more about the deployment process](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/README.md).
-  3. Run `terraform apply`. This automatically handles **all** deployment, including agent creation and configuration.
+> **Info: Deployment duration**
+> The deployment process `typically takes 15-20 minutes`.
+>
+> 1. Adjust [terraform.tfvars](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/terraform.tfvars) values.
+> 2. Initialize Terraform with `terraform init`. [Learn more about the deployment process](https://github.com/Cloud2BR-MSFTLearningHub/Agentic-AI-Media-Assistant/blob/main/terraform-infrastructure/README.md).
+> 3. Run `terraform apply`. This automatically handles **all** deployment, including agent creation and configuration.
 
 ## Deployment and reference guides
 
 <div class="guide-grid">
-  <a class="guide-card" href="deployment/terraform/">
+  <a class="guide-card" href="https://cloud2br-msftlearninghub.github.io/Agentic-AI-Media-Assistant/deployment/terraform/">
     <span class="guide-card__label">Infrastructure</span>
     <h2>Terraform deployment template</h2>
     <p>Review the template files, required values, and deployment commands.</p>
   </a>
-  <a class="guide-card" href="operations/troubleshooting/">
+  <a class="guide-card" href="https://cloud2br-msftlearninghub.github.io/Agentic-AI-Media-Assistant/operations/troubleshooting/">
     <span class="guide-card__label">Operations</span>
     <h2>Troubleshooting guide</h2>
     <p>Resolve setup, authentication, permissions, provider, and state issues.</p>
@@ -53,9 +53,9 @@ Last updated: 2026-01-23
 
 ## Key Features
 
-!!! warning "Regional deployment"
-  - **Multi-Region Deployment**: Sweden Central hosts 4 models + 2 agents, and East US hosts 1 model.
-  - All models use the **GlobalStandard** SKU for optimal performance and availability.
+> **Warning: Regional deployment**
+> - **Multi-Region Deployment**: Sweden Central hosts 4 models + 2 agents, and East US hosts 1 model.
+> - All models use the **GlobalStandard** SKU for optimal performance and availability.
 
 > For example East US \& Sweden Central:
 
@@ -85,8 +85,8 @@ Last updated: 2026-01-23
 
 ## Architecture Overview
 
-!!! info "Agent model boundary"
-  Agents use chat models only, not image-generation models. GPT-4o is a **chat model with vision**: it can analyze images in a conversation but does not generate images.
+> **Info: Agent model boundary**
+> Agents use chat models only, not image-generation models. GPT-4o is a **chat model with vision**: it can analyze images in a conversation but does not generate images.
 
 ### How it works
 
@@ -100,8 +100,8 @@ Last updated: 2026-01-23
    - **Code = generation models** (Sora, FLUX) for creating videos and images.
    - GPT-4o is a chat model that can analyze images, not an image-generation model.
 
-!!! warning "Azure quota and model availability"
-  The deployed models (`model-router`, `GPT-4o`, `FLUX.2-pro`, `FLUX.1-Kontext-pro`, and `Sora`) require GPU capacity and are subject to Azure quotas. If you encounter an **Insufficient Quota** error, request a quota increase through [Azure Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest).
+> **Warning: Azure quota and model availability**
+> The deployed models (`model-router`, `GPT-4o`, `FLUX.2-pro`, `FLUX.1-Kontext-pro`, and `Sora`) require GPU capacity and are subject to Azure quotas. If you encounter an **Insufficient Quota** error, request a quota increase through [Azure Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest).
 
 ## Architecture
 
